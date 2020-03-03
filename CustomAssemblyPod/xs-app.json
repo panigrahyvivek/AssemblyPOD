@@ -1,0 +1,20 @@
+{
+	"welcomeFile": "/ui/index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+			"source": "^/ui/(.*)$",
+			"target": "$1",
+			"service": "html5-apps-repo-rt",
+			"authenticationType": "xsuaa"
+		}, {
+			"source": "^/dme/production-ms/(.*)$",
+			"target": "$1",
+			"destination": "ASSEMBLY_POD_DEST",
+			"authenticationType": "xsuaa"
+		}
+
+	]
+}

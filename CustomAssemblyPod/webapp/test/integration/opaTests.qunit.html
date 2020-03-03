@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OPA5 tests</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta charset="UTF-8">
+
+    <script id="sap-ui-bootstrap"
+            src="/ui-lib/resources/sap-ui-core.js"
+            data-sap-ui-debug="true"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-theme="sap_belize_plus"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{
+              "sap.dm.dme.test": "/ui-lib/test",
+              "sap.custom.assemblypod" : "/dme/assemblypod"
+          }'>
+    </script>
+
+    <script>
+        sap.ui.require(["sap/dm/dme/test/integration/util/OpaUtil"], function(OpaUtil) {
+            OpaUtil.launchTestSuite("sap/custom/assemblypod/test/integration/AllJourneys");
+        });
+    </script>
+
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+{
+  "requests": {
+    "getSfc1Request": {
+      "method": "GET",
+      "url": "sfc/v1/sfcdetail?plant=P1&sfc=SFC1",
+      "response": "getSfc1Response"
+    },
+    "getSfc2Request": {
+      "method": "GET",
+      "url": "sfc/v1/sfcdetail?plant=P1&sfc=SFC2",
+      "response": "getSfc2Response"
+    },
+    "getSfc3Request": {
+      "method": "GET",
+      "url": "sfc/v1/sfcdetail?plant=P1&sfc=SFC3",
+      "response": "getSfc3Response"
+    },
+    "getSfcNotFoundRequest": {
+      "method": "GET",
+      "url": "sfc/v1/sfcdetail?plant=P1&sfc=SFCNOTFOUND",
+      "response": "getSfcNotFoundResponse"
+    },
+    "getSfcOnHoldRequest": {
+      "method": "GET",
+      "url": "sfc/v1/sfcdetail?plant=P1&sfc=SFCONHOLD",
+      "response": "getSfcOnHoldResponse"
+    },
+    "startSfc2": {
+      "method": "POST",
+      "url": "sfc/v1/sfcs/start",
+      "body": {
+          "plant": "P1",
+          "sfcs": ["SFC2"],
+          "operation": "OPER1",
+          "resource": "RES1",
+          "quantity": null
+      },
+      "response": "sfc2StartResponse"
+    },
+    "startSfc3": {
+      "method": "POST",
+      "url": "sfc/v1/sfcs/start",
+      "body": {
+          "plant": "P1",
+          "sfcs": ["SFC3"],
+          "operation": "OPER1",
+          "resource": "RES1",
+          "quantity": null
+      },
+      "response": "sfc3StartResponse"
+    },
+    "completeSfc1": {
+      "method": "POST",
+      "url": "sfc/v1/sfcs/complete",
+      "body": {
+          "plant": "P1",
+          "sfcs": ["SFC1"],
+          "operation": "OPER1",
+          "resource": "RES1",
+          "quantity": null
+      },
+      "response": "sfc1CompleteResponse"
+    },
+    "componentList_initial": {
+      "method": "GET",
+      "url": "assembly/v1/plannedComponents?plant=P1&sfc=SFC1&operationActivity=OPER1",
+      "response": "componentList_initial",
+      "responseChanges": {
+        "componentList_initial": "componentList_initial"
+      }
+    },
+    "componentList2_initial": {
+      "method": "GET",
+      "url": "assembly/v1/plannedComponents?plant=P1&sfc=SFC2&operationActivity=OPER1",
+      "response": "componentList_initial",
+      "responseChanges": {
+        "componentList_initial": "componentList_initial"
+      }
+    },
+    "componentList3_initial": {
+      "method": "GET",
+      "url": "assembly/v1/plannedComponents?plant=P1&sfc=SFC3&operationActivity=OPER1",
+      "response": "componentList3_initial",
+      "responseChanges": {
+        "componentList_initial": "componentList3_initial"
+      }
+    },
+    "assembled_data": {
+      "method": "GET",
+      "url": "assembly/v1/assembledComponents?plant=P1&sfc=SFC1&routingStepId=10&operationActivity=OPER1",
+      "response": "assembled_data"
+    },
+    "add_Component1": {
+      "method": "POST",
+      "url": "assembly/v1/assembledComponents",
+      "response": "add_Component1",
+      "responseChanges": {
+        "componentList_initial": "componentList_1_afterAdd"
+      },
+      "body": {
+        "plant": "P1",
+        "operationActivity": "OPER1",
+        "resource": "RES1",
+        "sfc": "SFC1",
+        "component": "BRACKET",
+        "componentVersion": "A",
+        "quantity": 2,
+        "dataFields": [
+	      {
+	         "fieldName":"SERIAL_NUMBER",
+	         "fieldValue":"1234-4567-00-ES"
+	      },
+	      {
+	         "fieldName":"LOT_NUMBER",
+	         "fieldValue":"002-001_LOT"
+	      },
+	      {
+	         "fieldName":"LOT_NUMBER",
+	         "fieldValue":"VL-000010200231"
+	      },
+	      {
+	         "fieldName":"COMMENTS",
+	         "fieldValue":"Barcode 1"
+	      }
+	   ]
+      }
+    },
+    "add_Component2": {
+      "method": "POST",
+      "url": "assembly/v1/assembledComponents",
+      "response": "add_Component2",
+      "responseChanges": {
+        "componentList_initial": "componentList_2_afterAdd"
+      },
+      "body": {
+        "plant": "P1",
+        "operationActivity": "OPER1",
+        "resource": "RES1",
+        "sfc": "SFC1",
+        "component": "COMP2",
+        "componentVersion": "B",
+        "quantity": 5,
+        "dataFields": [
+	      {
+	         "fieldName":"SERIAL_NUMBER",
+	         "fieldValue":"2345-6789-00-ES"
+	      },
+	      {
+	         "fieldName":"LOT_NUMBER",
+	         "fieldValue":"002-001_LOT"
+	      },
+	      {
+	         "fieldName":"LOT_NUMBER",
+	         "fieldValue":"VL-000010200231"
+	      },
+	      {
+	         "fieldName":"COMMENTS",
+	         "fieldValue":"Barcode 2"
+	      }
+	   ]
+      }
+    },
+    "add_Component3": {
+      "method": "POST",
+      "url": "assembly/v1/assembledComponents",
+      "response": "add_Component3",
+      "responseChanges": {
+        "componentList_initial": "componentList_3_afterAdd"
+      },
+      "body": {
+        "plant": "P1",
+        "operationActivity": "OPER1",
+        "resource": "RES1",
+        "sfc": "SFC1",
+        "component": "COMP3",
+        "componentVersion": "A",
+        "quantity": 6,
+        "dataFields": [
+	      {
+	         "fieldName":"SERIAL_NUMBER",
+	         "fieldValue":"3456-7890-00-ES"
+	      },
+	      {
+	         "fieldName":"LOT_NUMBER",
+	         "fieldValue":"002-001_LOT"
+	      },
+	      {
+	         "fieldName":"LOT_NUMBER",
+	         "fieldValue":"VL-000010200231"
+	      },
+	      {
+	         "fieldName":"COMMENTS",
+	         "fieldValue":"Barcode 3"
+	      }
+	   ]
+      }
+    },
+    "remove_Component1": {
+      "method": "DELETE",
+      "url": "assembly/v1/assembledComponents",
+      "response": "remove_Component1",
+      "responseChanges": {
+        "componentList_initial": "componentList_1_afterRemove"
+      },
+      "body": {
+        "plant": "P1",
+        "operationActivity": "OPER1",
+        "resource": "RES1",
+        "sfc": "SFC1",
+        "component": "BRACKET",
+        "componentVersion": "A",
+        "quantity": 2
+      }
+    },
+    "remove_Component3": {
+      "method": "DELETE",
+      "url": "assembly/v1/assembledComponents",
+      "response": "remove_Component3",
+      "responseChanges": {
+        "componentList_initial": "componentList_3_afterRemove"
+      },
+      "body": {
+        "plant": "P1",
+        "operationActivity": "OPER1",
+        "resource": "RES1",
+        "sfc": "SFC1",
+        "component": "COMP3",
+        "componentVersion": "A",
+        "quantity": 6
+      }
+    },
+    "getMaterialRequest": {
+      "method": "GET",
+      "url": "Materials('ItemBO%3aP1%2cLIGHTBULB%2cA')?$select=*&$expand=materialFileAttachments($select=ref,fileId,isDefault)&$format=json",
+      "response": "getMaterialResponse"
+    },
+    "getMaterialRequest2": {
+      "method": "GET",
+      "url": "Materials('ItemBO%3aP1%2cBULB%2cA')?$select=*&$expand=materialFileAttachments($select=ref,fileId,isDefault)&$format=json",
+      "response": "getMaterialResponse2"
+    },
+    "ain_document_details_511A97DFBBB74B1FB6D0A39BF2A8A61B": {
+      "method": "GET",
+      "url": "GetAllDocuments('511A97DFBBB74B1FB6D0A39BF2A8A61B')?$format=json",
+      "response": "ain_document_details_511A97DFBBB74B1FB6D0A39BF2A8A61B"
+    },
+    "ain_document_details_FC6832F039F94F3186F0814D9B689ED3": {
+      "method": "GET",
+      "url": "GetAllDocuments('FC6832F039F94F3186F0814D9B689ED3')?$format=json",
+      "response": "ain_document_details_FC6832F039F94F3186F0814D9B689ED3"
+    },
+    "FC6832F039F94F3186F0814D9B689ED3_jpg": {
+      "method": "HEAD",
+      "url": "attachments/download/FC6832F039F94F3186F0814D9B689ED3?lang=en",
+      "response": "FC6832F039F94F3186F0814D9B689ED3_jpg"
+    },
+    "511A97DFBBB74B1FB6D0A39BF2A8A61B_png": {
+      "method": "HEAD",
+      "url": "attachments/download/511A97DFBBB74B1FB6D0A39BF2A8A61B?lang=en",
+      "response": "511A97DFBBB74B1FB6D0A39BF2A8A61B_png"
+    }
+  },
+  "responses": {
+    "getSfc1Response": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/sfcs/sfc1.json"
+    },
+    "getSfc2Response": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/sfcs/sfc2.json"
+    },
+    "getSfc3Response": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/sfcs/sfc3.json"
+    },
+    "getSfcNotFoundResponse": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/sfcs/SfcNotFound.json"
+    },
+    "getSfcOnHoldResponse": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/sfcs/SfcOnHold.json"
+    },
+    "sfc2StartResponse": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/Sfc2StartResponse.json"
+    },
+    "sfc3StartResponse": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/Sfc3StartResponse.json"
+    },
+    "sfc1CompleteResponse": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/Sfc1CompleteResponse.json"
+    },
+    "getMaterialResponse": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/material_lightbulb.json"
+    },
+    "getMaterialResponse2": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/material_bulb.json"
+    },
+    "ain_document_details_511A97DFBBB74B1FB6D0A39BF2A8A61B": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/ain/511A97DFBBB74B1FB6D0A39BF2A8A61B.json"
+    },
+    "ain_document_details_FC6832F039F94F3186F0814D9B689ED3": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/ain/FC6832F039F94F3186F0814D9B689ED3.json"
+    },
+    "FC6832F039F94F3186F0814D9B689ED3_jpg": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/ain/lightbulb.png"
+    },
+    "511A97DFBBB74B1FB6D0A39BF2A8A61B_png": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/ain/teams.png"
+    },
+    "componentList_initial": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList_initial.json"
+    },
+    "componentList3_initial": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList3_initial.json"
+    },
+    "componentList_1_afterAdd": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList_1_afterAdd.json"
+    },
+    "componentList_1_afterRemove": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList_1_afterRemove.json"
+    },
+    "componentList_3_afterRemove": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList_3_afterRemove.json"
+    },
+    "componentList_2_afterAdd": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList_2_afterAdd.json"
+    },
+    "componentList_3_afterAdd": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/componentList/componentList_3_afterAdd.json"
+    },
+    "add_Component1": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/assembleComponents/assemble_response.json"
+    },
+    "add_Component2": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/assembleComponents/assemble_response.json"
+    },
+    "add_Component3": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/assembleComponents/assemble_response.json"
+    },
+    "remove_Component1": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/assembleComponents/remove_response.json"
+    },
+    "remove_Component3": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/assembleComponents/remove_response.json"
+    },
+    "assembled_data": {
+      "payload": "/sap/custom/assemblypod/test/integration/mock/mockData/assembleComponents/assembled_components.json"
+    }
+  }
+}

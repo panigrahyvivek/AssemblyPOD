@@ -1,0 +1,77 @@
+{
+    "@odata.context": "$metadata#Materials(bom(bom,version),assemblyDataType(dataType),routing(routing,version),removalComponentDataType(dataType),inventoryDataType(dataType))/$entity",
+    "plant": "P1",
+    "material": "LIGHTBULB",
+    "description": "Lightbulb",
+    "materialType": "GENERAL",
+    "procurementType": "MANUFACTURED",
+    "status": "RELEASABLE",
+    "version": "A",
+    "componentGroup": null,
+    "originalStatus": null,
+    "transferMaterialGroup": null,
+    "unitOfMeasure": "KG",
+    "alternateUnitsOfMeasure": [],
+    "erpGTIN": null,
+    "ainModelExternalId": null,
+    "effectiveStartSequence": null,
+    "effectiveEndSequence": null,
+    "quantityRestriction": "WHOLE_NUMBER",
+    "lastReleasedDate": null,
+    "effectiveStartDate": null,
+    "effectiveEndDate": null,
+    "selectorNote": null,
+    "assignSerialAtRelease": false,
+    "lotSize": 1,
+    "materialFileAttachments": [
+        {
+            "ref": "MaterialFileAttachmentBO:ItemBO:P1,BULB,A,511A97DFBBB74B1FB6D0A39BF2A8A61B",
+            "material": "ItemBO:P1,BULB,A",
+            "fileId": "511A97DFBBB74B1FB6D0A39BF2A8A61B",
+            "isDefault": false
+        },
+        {
+            "ref": "MaterialFileAttachmentBO:ItemBO:P1,LIGHTBULB,A,FC6832F039F94F3186F0814D9B689ED3",
+            "material": "ItemBO:P1,LIGHTBULB,A",
+            "fileId": "FC6832F039F94F3186F0814D9B689ED3",
+            "isDefault": true
+        }
+    ],
+    "timeBasedComponentType": null,
+    "consumptionTolerance": null,
+    "preAssembled": false,
+    "customValues": [
+        {
+            "attribute": "CDV1",
+            "value": "Custom data value 1"
+        },
+        {
+            "attribute": "CDV2",
+            "value": "Custom data value 2"
+        }
+    ],
+    "drawingName": null,
+    "maximumUsage": null,
+    "useCompFromDrawing": false,
+    "panel": false,
+    "quantityMultiplier": null,
+    "createTrackableSFC": null,
+    "holdId": null,
+    "collectParentSerial": false,
+    "requiresSerialNumberChange": false,
+    "isCollector": false,
+    "incrementBatchNumber": null,
+    "timeSensitive": false,
+    "maxShelfLife": null,
+    "maxShelfLifeUnits": null,
+    "maxFloorLife": null,
+    "maxFloorLifeUnits": null,
+    "erpBackflushing": false,
+    "useOrderIdFirstRelease": false,
+    "notes": null,
+    "currentVersion": false,
+    "modifiedDateTime": "2018-02-26T13:03:55.849Z",
+    "createdDateTime": "2018-02-26T13:03:55.849Z",
+    "ref": "ItemBO:P1,LIGHTBULB,A",
+    "mrpController": "MRP"
+}

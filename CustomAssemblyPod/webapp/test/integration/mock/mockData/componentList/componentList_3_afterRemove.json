@@ -1,0 +1,35 @@
+[
+  {
+    "plant": "P1",
+    "component": "BRACKET",
+    "componentVersion": "A",
+    "componentDescription": "BRACKET Component",
+    "requiredQuantity": 2,
+    "remainingQuantity": 0,
+    "assembledQuantity": 2,
+    "componentSequence": 10,
+    "assemblyDataType": "EXTERNAL_SERIAL"
+  },
+  {
+    "plant": "P1",
+    "component": "COMP2",
+    "componentVersion": "B",
+    "componentDescription": "Component #2",
+    "requiredQuantity": 5,
+    "remainingQuantity": 0,
+    "assembledQuantity": 5,
+    "componentSequence": 20,
+    "assemblyDataType": "EXTERNAL_SERIAL"
+  },
+  {
+    "plant": "P1",
+    "component": "COMP3",
+    "componentVersion": "A",
+    "componentDescription": "Component #3",
+    "requiredQuantity": 6,
+    "remainingQuantity": 6,
+    "assembledQuantity": 0,
+    "componentSequence": 30,
+    "assemblyDataType": null
+  }
+]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+
+    <title>DME POD</title>
+
+    <script type="text/javascript"
+            src="/sap/ui5/1/resources/sap-ui-core-dbg.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-theme="sap_belize_plus"
+            data-sap-ui-debug="true"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-async="true"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-frameOptions="trusted"
+            data-sap-ui-libs="sap.m,sap.dm.dme"
+            data-sap-ui-resourceroots='{
+                "sap.dm.dme.test": "/ui-lib/test",
+                "sap.custom.assemblypod": "../"
+            }'>
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <script type="text/javascript">
+
+        sap.ui.getCore().attachInit(function() {
+
+            sap.ui.require([
+                "sap/m/Shell",
+                "sap/ui/core/ComponentContainer",
+                "sap/dm/dme/localService/DmeMockServer"
+            ], function (Shell, ComponentContainer, mockServer) {
+                "use strict";
+
+                mockServer.init({
+                    sManifestPath: "sap/custom/assemblypod/manifest.json",
+                    oRequestMappingConfig: {
+                        appMappingConfig: "sap/custom/assemblypod/test/integration/mock/requestMapping.json"
+                    },
+                    sMockDataFolderPath: "sap/custom/assemblypod/test/integration/mock/mockData/"
+                });
+
+                new Shell({
+                    appWidthLimited: false,
+                    title: "Assembly POD",
+                    app: new sap.ui.core.ComponentContainer({
+                        height: "100%",
+                        name: "sap.custom.assemblypod"
+                    })
+                }).placeAt("content");
+
+            });
+
+        });
+
+    </script>
+</head>
+<body id="content" class="sapUiBody"></body>
+</html>
