@@ -71,7 +71,7 @@ sap.ui.define([
      * @public
      */
     RequestProcessor.prototype.getSfcRequestData = function(sPlant, sSfc, sWorkCenter) {
-        var sUrl = this.getProductionRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "sfc/v1/sfcdetail?plant=" + sPlant + "&sfc=" + sSfc;
         
         return {
@@ -163,7 +163,7 @@ sap.ui.define([
      */
     RequestProcessor.prototype.getComponentsRequestData = function(sPlant, sSfc, sOperation) {
 
-        var sUrl = this.getAssemblyRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "assembly/v1/plannedComponents";
         var oParameters = {
             "plant": sPlant,
@@ -222,7 +222,7 @@ sap.ui.define([
      */
     RequestProcessor.prototype.getAssembledComponentsRequestData = function(sPlant, sSfc, sOperation) {
 
-        var sUrl = this.getAssemblyRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "assembly/v1/assembledComponents";
 
         var oParameters = {
@@ -284,7 +284,7 @@ sap.ui.define([
      */
     RequestProcessor.prototype.addComponentRequestData = function(sPlant, oRequestData) {
 
-        var sUrl = this.getAssemblyRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "assembly/v1/assembledComponents";
 
         var oParameters = {
@@ -336,7 +336,7 @@ sap.ui.define([
      */
     RequestProcessor.prototype.removeComponentRequestData = function(sPlant, oRequestData) {
 
-        var sUrl = this.getAssemblyRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "assembly/v1/assembledComponents";
 
         var oParameters = {
@@ -389,7 +389,7 @@ sap.ui.define([
             quantity: fQuantity
         };
 
-        var sUrl = this.getProductionRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "sfc/v1/sfcs/start";
         
         return {
@@ -431,7 +431,7 @@ sap.ui.define([
             quantity: fQuantity
         };
 
-        var sUrl = this.getProductionRestDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "sfc/v1/sfcs/complete";
         
         return {
@@ -460,7 +460,7 @@ sap.ui.define([
      * @public
      */
     RequestProcessor.prototype.getMaterialFileIdRequestData = function(sPlant, sMaterial, sMaterialVersion) {   
-        var sUrl = this.getProductDataSourceUri();
+        var sUrl = this.getPublicApiRestDataSourceUri();
         sUrl = sUrl + "Materials('ItemBO%3a" + sPlant + "%2c" + sMaterial + "%2c" + sMaterialVersion + "')";
         sUrl = sUrl + "?$select=*&$expand=materialFileAttachments($select=ref,fileId,isDefault)&$format=json";
         return {

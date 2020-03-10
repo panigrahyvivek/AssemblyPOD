@@ -28,7 +28,7 @@
                 "type": "JSON"
             },
             "production-RestSource": {
-                "uri": "../dme/production-ms/",
+                "uri": "/dme/production-ms/",
                 "type": "JSON"
             },
             "assembly-RestSource": {
@@ -43,7 +43,7 @@
                 }
             },
             "publicApi-RestSource": {
-                "uri": "/TBD/",
+                "uri": "../dmeapi/",
                 "type": "JSON"
             }
         }

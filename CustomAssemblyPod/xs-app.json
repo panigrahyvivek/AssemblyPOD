@@ -10,9 +10,10 @@
 			"service": "html5-apps-repo-rt",
 			"authenticationType": "xsuaa"
 		}, {
-			"source": "^/dme/production-ms/(.*)$",
+			"source": "^/dmeapi/(.*)$",
 			"target": "$1",
 			"destination": "ASSEMBLY_POD_DEST",
+			"csrfProtection": false,
 			"authenticationType": "xsuaa"
 		}
 
