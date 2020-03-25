@@ -28,9 +28,6 @@ modules:
   - name: CustomAssemblyPod
     type: html5
     path: CustomAssemblyPod
-    requires:
-      - name: uaa_mta_CustomAssemblyPod
-      - name: destination_CustomAssemblyPod
     build-parameters:
       builder: grunt
       supported-platforms: []

@@ -1,21 +1,19 @@
 {
-	"welcomeFile": "index.html",
+	"welcomeFile": "/index.html",
 	"authenticationMethod": "route",
 	"logout": {
 		"logoutEndpoint": "/do/logout"
 	},
 	"routes": [{
-			"source": "^/ui/(.*)$",
-			"target": "$1",
-			"service": "html5-apps-repo-rt",
-			"authenticationType": "xsuaa"
-		}, {
-			"source": "^/dmeapi/(.*)$",
-			"target": "$1",
-			"destination": "ASSEMBLY_POD_DEST",
-			"csrfProtection": false,
-			"authenticationType": "xsuaa"
-		}
-
-	]
+		"source": "^/ui/(.*)$",
+		"target": "$1",
+		"service": "html5-apps-repo-rt",
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "^/dmeapi/(.*)$",
+		"target": "$1",
+		"destination": "ASSEMBLY_POD_DEST",
+		"csrfProtection": false,
+		"authenticationType": "xsuaa"
+	}]
 }
