@@ -461,8 +461,10 @@ sap.ui.define([
      */
     RequestProcessor.prototype.getMaterialFileIdRequestData = function(sPlant, sMaterial, sMaterialVersion) {   
         var sUrl = this.getPublicApiRestDataSourceUri();
-        sUrl = sUrl + "Materials('ItemBO%3a" + sPlant + "%2c" + sMaterial + "%2c" + sMaterialVersion + "')";
-        sUrl = sUrl + "?$select=*&$expand=materialFileAttachments($select=ref,fileId,isDefault)&$format=json";
+        //sUrl = sUrl + "Materials('ItemBO%3a" + sPlant + "%2c" + sMaterial + "%2c" + sMaterialVersion + "')";
+        //sUrl = sUrl + "?$select=*&$expand=materialFileAttachments($select=ref,fileId,isDefault)&$format=json";
+        
+        sUrl = sUrl + "material/v1/materials?plant=" + sPlant + "&material=" + sMaterial;
         return {
             "type": "GET",
             "url": sUrl,
