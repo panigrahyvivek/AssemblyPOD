@@ -13,7 +13,7 @@ sap.ui.define([
             var sResource = this._getUrlParameter("RESOURCE");
             var sPlant = this._getUrlParameter("PLANT");
             
-            sPlant = "SAP";
+            //sPlant = "SAP";
 
             // update global model with initial information
             var oModel = this._oApplicationUtil.getGlobalModel();

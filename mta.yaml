@@ -13,7 +13,7 @@ modules:
     requires:
       - name: mta_CustomAssemblyPod_html5_repo_runtime
       - name: uaa_mta_CustomAssemblyPod
-      - name: CustomAssemblyPod-destmtaCustomAssgVZf+/6iX8S7qipi
+      - name: destination_CustomAssemblyPod
   - name: mta_CustomAssemblyPod_ui_deployer
     type: com.sap.html5.application-content
     path: mta_CustomAssemblyPod_ui_deployer
@@ -30,7 +30,7 @@ modules:
     path: CustomAssemblyPod
     requires:
       - name: uaa_mta_CustomAssemblyPod
-      - name: CustomAssemblyPod-destmtaCustomAssgVZf+/6iX8S7qipi
+      - name: destination_CustomAssemblyPod
     build-parameters:
       builder: grunt
       supported-platforms: []
@@ -52,7 +52,7 @@ resources:
       service-plan: application
       service: xsuaa
     type: org.cloudfoundry.managed-service
-  - name: CustomAssemblyPod-destmtaCustomAssgVZf+/6iX8S7qipi
+  - name: destination_CustomAssemblyPod
     parameters:
       service-plan: lite
       service: destination

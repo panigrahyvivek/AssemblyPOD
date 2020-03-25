@@ -1,4 +1,5 @@
 {
+  "welcomeFile": "test.html",
   "authenticationMethod": "none",
   "routes": []
 }
