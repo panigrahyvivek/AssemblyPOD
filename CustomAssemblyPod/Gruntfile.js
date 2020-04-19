@@ -6,9 +6,7 @@ module.exports = function (grunt) {
 		deploy_mode: "html_repo"
 	});
 	grunt.registerTask("default", [
-		"clean",
-		"lint",
-		"build"
+		
 	]);
 	grunt.loadNpmTasks("@sap/grunt-sapui5-bestpractice-test");
 	grunt.registerTask("unit_and_integration_tests", ["test"]);

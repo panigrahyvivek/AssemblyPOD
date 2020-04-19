@@ -7,8 +7,7 @@
 	"routes": [{
 		"source": "^/ui/(.*)$",
 		"target": "$1",
-		"service": "html5-apps-repo-rt",
-		"authenticationType": "xsuaa"
+		"localDir": "webapp"
 	}, {
 		"source": "^/dmeapi/(.*)$",
 		"target": "$1",
