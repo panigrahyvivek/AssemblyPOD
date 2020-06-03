@@ -4,8 +4,7 @@
 	<HBox id="mainContent" width="100%" height="100%" alignItems="Center" justifyContent="Center" class="sapMainPageContent">
 	    <items>
 	       <Input id="scanField" placeholder="{i18n>scanSfcPlaceholder}" change="onSfcChange" 
-	              showValueHelp="false" class="sapAssemblyPodUpperCaseTransform" />
-           <Button id="scanButton" icon="sap-icon://bar-code" tooltip="{i18n>scanSfcTooltip}" press="onSfcChange"/>
+	              showValueHelp="true" class="sapAssemblyPodUpperCaseTransform sapAssemblyPodSfcScanField" />
 	    </items>
 	</HBox>
 </core:FragmentDefinition>

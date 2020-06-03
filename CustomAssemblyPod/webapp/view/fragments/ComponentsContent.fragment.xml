@@ -7,8 +7,7 @@
     	<VBox>
  	       	<HBox class="sapAssemblyScanComponentsContainer sapUiNoMarginBottom" height="100px" justifyContent="End" alignContent="Center">
                 <Input id="scanComponent" width="300px" placeholder="{i18n>scanComponentPlaceholder}" 
-                       change="onComponentChange" />
-                <Button id="scanComponentButton" icon="sap-icon://bar-code" tooltip="{i18n>scanComponentTooltip}" press="onComponentChange"/>
+                       showValueHelp="true" change="onComponentChange" class="sapAssemblyPodComponentScanField"/>
             </HBox>
             
 	        <items>                            
