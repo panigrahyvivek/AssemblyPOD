@@ -1,5 +1,5 @@
 {
-	"welcomeFile": "/index.html",
+	"welcomeFile": "/ui/index.html",
 	"authenticationMethod": "route",
 	"logout": {
 		"logoutEndpoint": "/do/logout"
