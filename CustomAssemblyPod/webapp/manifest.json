@@ -16,32 +16,6 @@
 			"version": "1.40.12"
 		},
         "dataSources": {
-            "ain-oDataSource": {
-                "uri": "/ain/odata.svc/",
-                "type": "OData",
-                "settings": {
-                    "odataVersion": "2.0"
-                }
-            },
-            "ain-RestSource": {
-                "uri": "/ac/rest/",
-                "type": "JSON"
-            },
-            "production-RestSource": {
-                "uri": "/dme/production-ms/",
-                "type": "JSON"
-            },
-            "assembly-RestSource": {
-                "uri": "/dme/assembly-ms/",
-                "type": "JSON"
-            },
-            "product-oDataSource": {
-                "uri": "/dme/product.svc/",
-                "type": "OData",
-                "settings": {
-                    "odataVersion": "4.0"
-                }
-            },
             "publicApi-RestSource": {
                 "uri": "../dmeapi/",
                 "type": "JSON"
